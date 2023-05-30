@@ -1,166 +1,1906 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduGeeks - Empowering Education with Technology</title>
-  <link rel="stylesheet" href="style.css">
-    <style>
-        /* Reset default styles */
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title> EduGeeks | Empowering education through technology</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js">
+     </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!--Get your own code at fontawesome.com-->
+<style>
+:root {
+  --baseColor: #606468;
+  --goldenrodColor: #ffb31a;
+  --iconColor: #1e90ff;
+  --spinColor: #FC3D6D;
+  --backgroundFirst: #000;
+  --backgroundSecond: #fff;
+  --backgroundThird: #eee;
+}
+
+
+
+:root{
+    --primary-color:#067a75;
+    --black-color:#067a75;
+    --white-color:#fff;
+    --hover-color:#091618;
+}
+
+
+
+
+:root {
+  --mainColor: #292929;
+  --baseColor: #606468;
+
+  --goldenrodColor: #ffb31a;
+  --iconColor: #1e90ff;
+  --spinColor: #FC3D6D;
+  --backgroundFirst: #151515;
+  --backgroundSecond: #fff;
+  --backgroundThird: #eee;
+}
+
+
+:root {
+  --background: #000;
+  --htmlFontSize: 100%;
+  --black-bckgrnd: #0d0d0d
+  --bodyBackgroundColor: #2c3338;
+  --bodyColor: var(--baseColor);
+  --bodyFontFamily: "Open Sans";
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+}
+
 * {
-  box-sizing: border-box;
+  box-sizing:border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--bodyColor);
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+
+
+
+
+.designbtn {
+		    background-color: #0d0d0d;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 15vh;
+			width: 100%;
+			color: #fff;
+			text-align: center;
+		}
+		.designbtn h1 {
+			font-size: 8vw;
+			font-weight: 1000;
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+		}
+		.designbtn p {
+		    color: var(--bodyColor);
+			font-size: 1.5rem;
+			margin: 0;
+			padding: 2rem 0;
+			max-width: 800px;
+		}
+		.designbtn button {
+			background-color: var(--goldenrodColor);
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 30px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+		}
+		.designbtn button:hover {
+			background-color: #333333;
+			color: #ffffff;
+		}
+
+
+
+
+
+
+/* -----------
+======================
+Navbar Code
+======================
+------------ */
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.img {
+  display: inline-block;
+  height: 50px;
+  z-index: 3;
+}
+
+.nav {
+  background: var(--background);
+  height: 60px;
+  font-weight: ;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+.nav > .nav-header {
+  display: inline;
+}
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  padding: 8px 8px 8px 8px;
+}
+.nav > .nav-btn {
+  display: none;
+}
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 20px;
+  margin-right: 0px;
+}
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 20px 10px 20px 10px;
+  text-decoration: none;
+  color: #b3b3b3;
+  font-family: "Catamaran", sans-serif;
+}
+
+.nav > .nav-links > a:hover,
+a:focus {
+  transform: translateY(-.2rem);
+  color: var(--goldenrodColor);
+  text-decoration: none;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    margin-top: 5px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: inherit;
+  }
+
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label,
+label:focus {
+  transform: translateY(-.2rem);
+  text-decoration: none;
+}
+
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 9px;
+    border-top: 4px solid var(--backgroundSecond);
+  }
+  .nav > .nav-links {
+    position: relative;
+    display: #0d0d0d0;
+    width: 100%;
+    background-color: black;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    top: -19px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+/* -----------
+======================
+Navbar Code End
+======================
+------------ */
+
+
+
+
+
+
+/* ---
+===================
+HERO SECTION=====
+===================
+--- */
+.hero {
+		    background-color: ;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			color: #fff;
+			text-align: center;
+		}
+		.hero h1 {
+		    color: var(--backgroundThird);
+			font-size: 10vw;
+			font-weight: 1000;
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+		}
+		.hero p {
+		    color: var(--bodyColor);
+			font-size: 1.5rem;
+			margin: 0;
+			padding: 2rem 0;
+			max-width: 900px;
+		}
+		.hero button {
+			background-color: var(--goldenrodColor);
+            border: none;
+            color: #000;
+            cursor: pointer;
+            font-size: 1.5rem;
+            border-radius: 5px;
+	        padding: 1rem 2rem;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+		}
+		.hero button:hover {
+			background-color: #333333;
+			color: #ffffff;
+		}
+/* ---
+===================
+/HERO SECTION=====
+===================
+--- */
+
+
+
+
+
+
+
+
+.mission {
+background: #0d0d0d;
+border-top: 1px solid rgba(74, 67, 67, 0.51);
+width: 100%;
+padding: 40px;
+margin-top: 100px;
+}
+
+ .mission .header {
+        display: flex;
+        align-items: center;
+      }
+
+      .mission .line-right {
+        height: 1.3px;
+        width: 45%;
+        background-color: var(--goldenrodColor);
+        margin-left: 5px;
+      }
+
+      .mission .line-left {
+        height: 1.3px;
+        width: 45%;
+        background-color: #FC6D6D;
+        margin-right: 5px;
+      }
+
+      .mission .title {
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+.mission p {
+color: #b3b3b3;
+width: 80%;
+font-size: 19px;
+font-align: center;
+align-items: center;
+padding: 0px;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33.3333333%;
+  padding: 0 10px;
+}
+
+
+
+/* -----
+==============
+MISSION SECTION=========
+=============
+------ */
+/* Remove extra left and right margins, due to padding */
+.row {
+background: #0d0d0d;
+border-bottom: 1px solid rgba(74, 67, 67, 0.51);
+margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 20px;
+  text-align: center;
+  color: #b3b3b3;
+}
+
+
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.icon-title {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+#empower-icon {
+        width: 120px;
+        height: 120px;
+        fill: #FF9900;
+        stroke: #ffb31a;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        animation: empower-anim 2s linear infinite alternate;
+      }
+
+      @keyframes empower-anim {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(0, 10px);
+        }
+      }
+/* -----
+==============
+/MISSION SECTION=========
+=============
+------ */
+
+
+
+.attached {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1443' height='556' preserveAspectRatio='none' viewBox='0 0 1443 556'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1012%26quot%3b)' fill='none'%3e%3cpath d='M -166.4347512695938%2c189 C -94.23%2c220.8 50.17%2c353.4 194.5652487304062%2c348 C 338.97%2c342.6 411.17%2c171 555.5652487304062%2c162 C 699.97%2c153 772.17%2c287.8 916.5652487304062%2c303 C 1060.97%2c318.2 1133.17%2c238 1277.5652487304062%2c238 C 1421.97%2c238 1605.48%2c312.6 1638.5652487304062%2c303 C 1671.65%2c293.4 1482.11%2c212.6 1443%2c190' stroke='rgba(252%2c 109%2c 109%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -374.7848642210316%2c189 C -302.58%2c221 -158.18%2c334.6 -13.784864221031606%2c349 C 130.62%2c363.4 202.82%2c259.4 347.2151357789684%2c261 C 491.62%2c262.6 563.82%2c375.6 708.2151357789684%2c357 C 852.62%2c338.4 924.82%2c167.8 1069.2151357789685%2c168 C 1213.62%2c168.2 1355.46%2c347.4 1430.2151357789685%2c358 C 1504.97%2c368.6 1440.44%2c248.4 1443%2c221' stroke='rgba(255%2c 179%2c 26%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -663.2345147061762%2c381 C -591.03%2c342 -446.63%2c203 -302.2345147061763%2c186 C -157.83%2c169 -85.63%2c286.4 58.7654852938237%2c296 C 203.17%2c305.6 275.37%2c231.2 419.7654852938237%2c234 C 564.17%2c236.8 636.37%2c307.4 780.7654852938238%2c310 C 925.17%2c312.6 1009.32%2c248.4 1141.7654852938238%2c247 C 1274.21%2c245.6 1382.75%2c291.8 1443%2c303' stroke='rgba(252%2c 109%2c 109%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -266.26715320315174%2c258 C -194.07%2c274.2 -49.67%2c341.8 94.73284679684825%2c339 C 239.13%2c336.2 311.33%2c248.2 455.73284679684826%2c244 C 600.13%2c239.8 672.33%2c318.8 816.7328467968482%2c318 C 961.13%2c317.2 1033.33%2c231.4 1177.7328467968482%2c240 C 1322.13%2c248.6 1485.68%2c375.8 1538.7328467968482%2c361 C 1591.79%2c346.2 1462.15%2c205 1443%2c166' stroke='rgba(255%2c 179%2c 26%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1012'%3e%3crect width='1443' height='556' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 0px;
+  }
+
+  .attached .card {
+                    /* From https://css.glass */
+background: #26262680;
+border-radius: 0px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.2px);
+-webkit-backdrop-filter: blur(6.2px);
+border: 1px solid rgba(74, 67, 67, 0.51);
+    margin: 20px;
+    padding: 50px;
+    text-align: left;
+    width: 600px;
+    display: grid;
+  }
+
+  .attached .card h2 {
+    color: #FC6D6D;
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  .attached .card p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .attached .card button {
+    background-color: var(--goldenrodColor);
+    border: none;
+    border-radius: px;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 30px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+  }
+
+  .attached .card button:hover {
+    background-color: #fff;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+  }
+
+
+
+
+
+
+
+
+
+
+.header-large {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.center-header {
+   color: var(--baseColor);
+  font-size: 7vw;
+  font-weight: 1000;
+  margin-bottom: 0.2em;
+}
+
+.center-paragraph {
+  color: var(--baseColor);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+
+
+/* -----------
+======================
+ECOSYSTEM
+======================
+------------ */
+  .main {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1499' height='510' preserveAspectRatio='none' viewBox='0 0 1499 510'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1013%26quot%3b)' fill='none'%3e%3cpath d='M695.3 527.27C827.37 519.57 926.21 277.82 1161.8 277.49 1397.4 277.16 1508.06 393.9 1628.31 394.79' stroke='rgba(252%2c 109%2c 109%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M744.06 559.3C833.37 555.89 809.26 417.23 1069.56 411.47 1329.85 405.71 1549.24 200 1720.55 197.27' stroke='rgba(252%2c 109%2c 109%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M605.89 543.54C733.41 505.17 689.53 142.86 956.12 142.19 1222.7 141.52 1473.09 358.95 1656.57 361.49' stroke='rgba(252%2c 109%2c 109%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M407.37 594.96C555.43 561.07 605.24 175.2 839.5 167.91 1073.77 160.62 1055.57 231.66 1271.64 231.66 1487.7 231.66 1594.57 168.08 1703.77 167.91' stroke='rgba(252%2c 109%2c 109%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M663.68 522.38C794.12 459.89 731.14 42.4 981.12 38.7 1231.1 35 1451.14 215.51 1616.01 217.2' stroke='rgba(252%2c 109%2c 109%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1013'%3e%3crect width='1499' height='510' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+  }
+
+  .main .card {
+background: #26262680;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.2px);
+-webkit-backdrop-filter: blur(6.2px);
+border: 1px solid rgba(74, 67, 67, 0.51);
+border-radius: px;
+    margin: 20px;
+    padding: 40px;
+    text-align: center;
+    width: 560px;
+  }
+
+  .main .card h2 {
+    color: #FC6D6D;
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  .main .card p {
+    color: var(--baseColor);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .main .card button {
+    background-color: #FC6D6D;
+    box-shadow: 0px 5px 25px 0px #FC6D6D;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .main .card button:hover {
+    background-color: var(--goldenrodColor);
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+  }
+
+
+
+
+
+
+
+/* -----------
+======================
+/TOKENOMICS
+======================
+------------ */
+#tokenomics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+ #tokenomics .card {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 550px;
+  }
+
+  #tokenomics .card span {
+    color: #ffb31a;
+    font-size: 5.5vw;
+    font-weight: 1000;
+    margin-top: 0;
+  }
+
+  #tokenomics .card p {
+    color: var(--baseColor);
+    font-size: 16px;
+    line-height: ;
+    margin-bottom: 0px;
+  }
+
+
+
+
+/* ---
+===================
+Buttons Section
+===================
+--- */
+.developer-portal {
+background: #B794F4;
+box-shadow: 0px 0px 10px 3px rgba(240, 248, 255, 0.2);
+line-height: 5;
+border-radius: 8px;
+border: 2px solid rgba(255, 255, 255, 0.2);
+padding: 7px 20px;
+}
+
+.innovator-portal {
+background: rgb(255 255 255 / 25%);
+box-shadow: 0px 0px 10px 3px rgba(240, 248, 255, 0.2);
+opacity: 0.4;
+border-radius: 8px;
+padding: 7px 20px;
+border: 2px solid rgba(255, 255, 255, 0.2);
+}
+/* ---
+===================
+/Buttons Section
+===================
+--- */
+
+
+
+
+
+
+
+/* -----------
+======================
+Integrated Sppace Section
+======================
+------------ */
+.about {
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1453' height='556' preserveAspectRatio='none' viewBox='0 0 1453 556'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1003%26quot%3b)' fill='none'%3e%3cpath d='M -153.52287541842261%2c435 C -104.92%2c389.8 -7.72%2c238.8 89.47712458157739%2c209 C 186.68%2c179.2 235.28%2c280 332.4771245815774%2c286 C 429.68%2c292 478.28%2c216 575.4771245815774%2c239 C 672.68%2c262 721.28%2c419 818.4771245815774%2c401 C 915.68%2c383 964.28%2c156.8 1061.4771245815773%2c149 C 1158.68%2c141.2 1207.28%2c353.8 1304.4771245815773%2c362 C 1401.68%2c370.2 1517.77%2c193.2 1547.4771245815773%2c190 C 1577.18%2c186.8 1471.9%2c314.8 1453%2c346' stroke='rgba(8%2c 145%2c 178%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -333.9437046682571%2c381 C -285.34%2c339.4 -188.14%2c167 -90.94370466825711%2c173 C 6.26%2c179 54.86%2c390.4 152.0562953317429%2c411 C 249.26%2c431.6 297.86%2c294.2 395.0562953317429%2c276 C 492.26%2c257.8 540.86%2c337.2 638.0562953317428%2c320 C 735.26%2c302.8 783.86%2c174.8 881.0562953317428%2c190 C 978.26%2c205.2 1026.86%2c386.8 1124.0562953317428%2c396 C 1221.26%2c405.2 1301.27%2c252.2 1367.0562953317428%2c236 C 1432.85%2c219.8 1435.81%2c299.2 1453%2c315' stroke='rgba(8%2c 145%2c 178%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -35.94398232791329%2c331 C 12.66%2c308.2 109.86%2c194.4 207.0560176720867%2c217 C 304.26%2c239.6 352.86%2c451.4 450.0560176720867%2c444 C 547.26%2c436.6 595.86%2c196.8 693.0560176720867%2c180 C 790.26%2c163.2 838.86%2c352.8 936.0560176720867%2c360 C 1033.26%2c367.2 1081.86%2c215.4 1179.0560176720867%2c216 C 1276.26%2c216.6 1324.86%2c373.4 1422.0560176720867%2c363 C 1519.26%2c352.6 1658.87%2c167.4 1665.0560176720867%2c164 C 1671.24%2c160.6 1495.41%2c309.6 1453%2c346' stroke='rgba(192%2c 38%2c 211%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -160.3948991478578%2c380 C -111.79%2c345.2 -14.59%2c225.2 82.60510085214217%2c206 C 179.81%2c186.8 228.41%2c278.6 325.6051008521422%2c284 C 422.81%2c289.4 471.41%2c203.4 568.6051008521422%2c233 C 665.81%2c262.6 714.41%2c448.8 811.6051008521422%2c432 C 908.81%2c415.2 957.41%2c176.8 1054.6051008521422%2c149 C 1151.81%2c121.2 1200.41%2c276.8 1297.6051008521422%2c293 C 1394.81%2c309.2 1509.53%2c202.2 1540.6051008521422%2c230 C 1571.68%2c257.8 1470.52%2c391.6 1453%2c432' stroke='rgba(192%2c 38%2c 211%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1003'%3e%3crect width='1453' height='556' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+width: 100%;
+padding: 20px;
+float: center;
+text-align: center;
+}
+.about .header-text {
+color: ;
+font-size: 40px;
+font-weight: 1000;
+text-align: center;
+line-height: vw;
+margin-top: 20px;
+}
+
+.about .note-text {
+color: #000;
+font-size: 20px;
+font-weight: 500;
+text-align: center;
+float: center;
+margin-top: 20px;
+}
+
+
+
+/* Float four columns side by side */
+/* Float four columns side by side */
+.focus-column {
+  float: left;
+  width: 33.3333333%;
+  padding: 0 15px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.focus-row {
+background: transparent;
+margin: 0 -5px;
+margin-top: 0rem;
+width: 100%;
+height: 250hv;
+}
+
+
+/* Clear floats after the columns */
+.focus-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .focus-column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.focus-card {
+    /* From https://css.glass */
+background: #26262680;
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.2px);
+-webkit-backdrop-filter: blur(6.2px);
+border: 1px solid rgba(74, 67, 67, 0.51);
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Style the counter cards */
+.focus-card > p {
+  font-size 22px;
+  text-align: center;
+}
+
+.about .download-doc {
+background: transparent;
+
+  border: 1px solid #292929;
+  border-radius: 1rem;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  padding: 8px 20px;
+  transition: .1s;
+  text-decoration: none;
+}
+
+.about svg {
+fill: #3333ff;
+stroke: #FFF;
+height: 1.935em;
+width: 1.935em;
+}
+/* -----------
+======================
+/Integrated Space Section
+======================
+------------ */
+
+
+
+.design {
+		    background-color: #0d0d0d;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 25vh;
+			width: 100%;
+			color: #fff;
+			text-align: center;
+			margin-top: 150px;
+		}
+		.design h1 {
+			font-size: 7vw;
+			font-weight: 1000;
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+		}
+		.design p {
+		    color: var(--bodyColor);
+			font-size: 1.5rem;
+			margin: 0;
+			padding: 2rem 0;
+			max-width: 800px;
+		}
+		.design button {
+			background-color: var(--goldenrodColor);
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 30px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+		}
+		.design button:hover {
+			background-color: #333333;
+			color: #ffffff;
+		}
+
+
+
+
+
+
+
+
+
+.header-large {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.center-header {
+   color: #f2f2f2;
+  font-size: 7vw;
+  font-weight: 1000;
+  margin-bottom: 0.5em;
+}
+
+.center-paragraph {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+
+
+  #ecosystem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  #ecosystem .card {
+                    /* From https://css.glass */
+background: #26262680;
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.2px);
+-webkit-backdrop-filter: blur(6.2px);
+border: 1px solid rgba(74, 67, 67, 0.51);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    display: grid;
+  }
+
+  #ecosystem .card h2 {
+    color: #FC6D6D;
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  #ecosystem .card p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  #ecosystem .card button {
+    background-color: var(--goldenrodColor);
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 30px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+  }
+
+  #ecosystem .card button:hover {
+    background-color: #fff;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+  }
+
+
+
+
+
+p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.bottom-line {
+background: white;
+padding: 0.1px;
+width: 90%;
+}
+
+.bottom-line-text {
+display: inline-block;
+}
+
+
+
+
+
+
+
+/*  --typing effect--  */
+#spin-feature {
+font-size: 25px;
+  color: #fff;
+}
+
+#spin-feature:after {
+  content:"";
+  animation: spin 40s linear infinite;
+}
+
+@keyframes spin-feature {
+  0% { content:"Interactive Learning Materials";}
+  10% { content:"Data Science";}
+  20% { content:"Mobile App Development";}
+  30% { content:"Artificial Intelligence";}
+  40% { content:"Machine Learning";}
+  50% { content: "Cybersecurity";}
+  60% { content: "Digital Marketing";}
+  70% { content: "Blockchain Technology";}
+  80% { content: "Graphic Design";}
+  90% { content: "Game Development";}
+
+  100% { content:"Entrepreneurship";}
+  110% { content:"Project Management";}
+  120% { content:"UX/UI Design";}
+  130% { content:"Internet of Things (IoT)";}
+  140% { content:"Software Engineering";}
+  150% { content: "Computer Networking";}
+  160% { content: "Data Analytics";}
+  170% { content: "Product Management";}
+  180% { content: "Agile Methodology";}
+  190% { content: "Landsc";}
+}
+/*  --/tping effect--  */
+
+
+
+
+
+
+
+/*  --typing effect--  */
+#spin {
+font-size: 25px;
+  color: var(--goldenrodColor);
+}
+
+#spin:after {
+  content:"";
+  animation: spin 40s linear infinite;
+}
+
+@keyframes spin {
+  0% { content:"Web Development";}
+  10% { content:"Data Science";}
+  20% { content:"Mobile App Development";}
+  30% { content:"Artificial Intelligence";}
+  40% { content:"Machine Learning";}
+  50% { content: "Cybersecurity";}
+  60% { content: "Digital Marketing";}
+  70% { content: "Blockchain Technology";}
+  80% { content: "Graphic Design";}
+  90% { content: "Game Development";}
+
+  100% { content:"Entrepreneurship";}
+  110% { content:"Project Management";}
+  120% { content:"UX/UI Design";}
+  130% { content:"Internet of Things (IoT)";}
+  140% { content:"Software Engineering";}
+  150% { content: "Computer Networking";}
+  160% { content: "Data Analytics";}
+  170% { content: "Product Management";}
+  180% { content: "Agile Methodology";}
+  190% { content: "Landsc";}
+}
+/*  --/tping effect--  */
+
+
+
+
+
+
+
+
+.bunches {
+		    background-color: #0d0d0d;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			width: 100%;
+			padding: 20px;
+			color: #fff;
+			text-align: center;
+		}
+		.bunches h1 {
+			font-size: 40px;
+			font-weight: 1000;
+			margin: 0;
+			padding: 0;
+			line-height: 1.2;
+		}
+		.bunches p {
+		    color: var(--bodyColor);
+			font-size: 1.5rem;
+			margin: 0;
+			padding: 2rem 0;
+			max-width: 800px;
+		}
+		.bunches button {
+			font-size: 1.5rem;
+			background-color: #ffffff;
+			border: none;
+			border-radius: 5px;
+			padding: 1rem 2rem;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		.bunches button:hover {
+			background-color: #333333;
+			color: #ffffff;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about {
+background-color: transparent;
+width: 100%;
+padding: 30px;
+}
+
+.about h1{
+color: #000;
+width; 70%;
+margin-top: 30px;
+text-align: center;
+font-weight: 1000;
+}
+
+.about p {
+color: inherit;
+padding: 30px;
+text-align: center;
+font-size: 20px;
+}
+
+
+
+
+
+
+
+
+/*
+======================
+Coin slide names============
+======================
+*/
+
+
+
+
+
+
+.distribution {
+  margin-top: 0px;
+  padding: 70px;
+}
+
+.distribution h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 1000;
+  text-align: center;
+}
+
+.distribution ul {
+  list-style: none;
+  margin-top: 0px;
   padding: 0;
 }
 
-/* Custom styles */
-body {
-  font-family: Arial, sans-serif;
+.distribution li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.distribution .label {
+  font-size: 25px;
   color: #333;
 }
 
-header {
-  background-color: #f2f2f2;
+.distribution .value {
+  font-size: 20px;
+  color: #fff;
+}
+
+/*
+======================
+Coin slide names end============
+======================
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  background-color: black;
+  padding: 64px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 55%;
   padding: 20px;
 }
 
-nav {
+.column-33 {
+  float: left;
+  width: 45%;
+  padding: 20px;
+}
+
+.large-font {
+color: #000;
+  font-size: 48px;
+}
+
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #04AA6D;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+
+
+
+
+
+
+
+
+#attached {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+    margin-top: 0px;
+  }
+
+  #attached .card {
+                    /* From https://css.glass */
+background: #26262680;
+border-radius: 0px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.2px);
+-webkit-backdrop-filter: blur(6.2px);
+border: 1px solid rgba(74, 67, 67, 0.51);
+    margin: 20px;
+    padding: 50px;
+    text-align: left;
+    width: 600px;
+    display: grid;
+  }
+
+  #attached .card h2 {
+    color: #FC6D6D;
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  #attached .card p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  #attached .card button {
+    background-color: var(--goldenrodColor);
+    border: none;
+    border-radius: px;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 30px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+  }
+
+  #attached .card button:hover {
+    background-color: #fff;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+  }
+
+
+
+
+
+
+.slide-card {
+  display: none;
+  text-align: center;
+}
+
+.slideshow-container h2{
+color: #fff;
+padding: 15px;
+}
+
+.slideshow-container {
+  background-color: #0d0d0d;
+  border-left: 1px solid #FC3D6D;
+  border-right: 1px solid var(--goldenrodColor);
+  position: relative;
+  width: 80%;
+  height: 200px; /* Adjust the height as needed */
+}
+
+.slideshow-container p{
+color: #fff;
+font-size: 20px;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.bottom-line {
+background: white;
+padding: 0.1px;
+width: 90%;
+}
+
+.bottom-line-text {
+display: inline-block;
+}
+
+
+
+
+
+
+
+/* ---
+===================
+Footer Section
+===================
+--- */
+footer{
+  position: relative;
+  background: #000;
+  width: 100%;
+  bottom: -50px;
+}
+footer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  background: #000;
+}
+footer .content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .content .top{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 0px;
+}
+.content .top .logo-details{
+  color: #fff;
+  font-size: 30px;
 }
 
-.logo {
-  font-size: 24px;
+footer .content .link-boxes{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+footer .content .link-boxes .box{
+  width: calc(100% / 5 - 10px);
 }
-
-nav ul li {
-  display: inline-block;
+.content .link-boxes .box .link_name{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  position: relative;
+}
+.link-boxes .box .link_name::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #fff;
+}
+.content .link-boxes .box li{
+  margin: 6px 0;
+  list-style: none;
+}
+.content .link-boxes .box li a{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease
+}
+.content .link-boxes .box li a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.content .link-boxes .input-box{
+  margin-right: 55px;
+}
+.link-boxes .input-box input{
+  height: 40px;
+  width: calc(100% + 55px);
+  outline: none;
+  border: 2px solid #AFAFB6;
+  background: #140B5C;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 5px;
+}
+.link-boxes .input-box input::placeholder{
+  color: #AFAFB6;
+  font-size: 16px;
+}
+.link-boxes .input-box input[type="button"]{
+  background: #fff;
+  color: #140B5C;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.input-box input[type="button"]:hover{
+  opacity: 1;
+}
+footer .bottom-details{
+  width: 100%;
+background: #2c303a;
+}
+footer .bottom-details .bottom_text{
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a{
   margin-right: 10px;
 }
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
+@media (max-width: 900px) {
+  footer .content .link-boxes{
+    flex-wrap: wrap;
+  }
+  footer .content .link-boxes .input-box{
+    width: 40%;
+    margin-top: 10px;
+  }
 }
-
-.hero {
-  background-image: url("background.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 100px 0;
-  text-align: center;
-  color: #fff;
+@media (max-width: 700px){
+  footer{
+    position: relative;
+  }
+  .content .top .media-icons a{
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    line-height: 35px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 3 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 60%;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 12px;
+  }
 }
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+@media (max-width: 520px){
+  footer::before{
+    top: 145px;
+  }
+  footer .content .top{
+    flex-direction: column;
+  }
+  .content .top .media-icons{
+    margin-top: 5px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 2 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 100%;
+  }
 }
+/* ---
+===================
+/Footer Section
+===================
+--- */
 
-.btn {
-  background-color: #0088cc;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 4px;
-}
 
-.features {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-}
-
-.feature {
-  text-align: center;
-  margin: 0 20px;
-}
-
-.feature img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-}
-
-.feature h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.feature p {
-  color: #666;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-    </style>
+</style>
 </head>
-
 <body>
-  <header>
-    <nav>
-      <div class="logo">EduGeeks</div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to EduGeeks</h1>
-      <p>Empowering education through technology.</p>
-      <a href="#" class="btn">Get Started</a>
-    </div>
-  </section>
 
-  <section class="features">
-    <div class="feature">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-12h-2v6h2v-6zm0 8h-2v2h2v-2z"/>
-      </svg>
-      <h2>Interactive Courses</h2>
-      <p>Engage in interactive and hands-on courses to enhance your learning experience.</p>
-    </div>
-    <div class="feature">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-12h-2v6h2v-6zm0 8h-2v2h2v-2z"/>
-      </svg>
-      <h2>Expert Instructors</h2>
-      <p>Learn from industry experts and experienced instructors in their respective fields.</p>
-    </div>
-    <div class="feature">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-12h-2v6h2v-6zm0 8h-2v2h2v-2z"/>
-      </svg>
-      <h2>Community</h2>
-      <p>Join a vibrant community of learners and educators to collaborate and share knowledge.</p>
-    </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2023 EduGeeks. All rights reserved.</p>
-  </footer>
+<!-------
+ ======================
+ Navbar Section============
+ ======================
+ ------>
+ <header class="header">
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <span><img class="img" src="https://assets.brandfolder.com/pl546j-7le8zk-btwjnu/view@2x.png?v=1586891797" /></span>
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="nav-links">
+    <a href="#graphpaper">About</a>
+    <a href="#tokenization">Mission</a>
+    <a href="#mission">Courses</a>
+    <a href="#tokenomics">Features</a>
+    <a href="#roadmap">Roadmap</a>
+  </div>
+</div>
+</header>
+  <!-------
+ ======================
+ / Navbar Section============
+ ======================
+ ------>
+
+
+
+
+
+
+
+  <!-------
+ ======================
+ HERO SECTION============
+ ======================
+ ------>
+<section class="hero">
+		<h1>Learning Gap</h1>
+		<p id="graphpaper">
+          EduGeeks is a fictional <span style="color: #FC6D6D;">educational</span> platform that leverages technology to empower
+          learners and enhance the educational experience. It is a digital learning platform
+          designed to provide access to a wide range of courses, resources, and tools to support
+          the pursuit of knowledge and skills development.
+         </p>
+		<button>Graphpaper &darr;</button>
+	</section>
+  <!-------
+ ======================
+ /HERO SECTION============
+ ======================
+ ------>
+
+
+
+
+<div class="attached">
+      <div class="card">
+        <h2 style="color: var(--goldenrodColor);">Token</h2>
+        <p>The native token of the DFT ecosystem.</p>
+        <button>Developers Hub</button>
+      </div>
+      <div class="card">
+        <h2>Governance</h2>
+        <p>A decentralized system for community governance and decision-making.</p>
+        <button style="background: #FC6D6D;">Designers Hub</button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+ <section class="mission" id="mission">
+        <div class="header">
+       <div class="line-left"></div>
+      <div class="title">Mission</div>
+     <div class="line-right"></div>
+    </div>
+     <center>
+        <p>
+          Empowering education through technology, EduGeeks unlocks limitless potential, fosters lifelong learning, and prepares learners for a dynamic world. Join us on the journey of educational empowerment and embrace a future filled with boundless opportunities.
+        </p>
+         </center>
+    </section>
+
+
+
+  <!-------
+ ======================
+ MISSION SECTION============
+ ======================
+ ------>
+     <div class="row">
+  <div class="column">
+    <div class="card">
+
+   <div class="icon-container">
+  <!-- Empowering designers icon -->
+<svg id="empower-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="40" stroke="transparent" stroke-width="2" fill="transparent" />
+  <path d="M 50 30 L 35 65 L 50 50 L 65 65 Z" fill="black" />
+  <path d="M 40 70 L 60 70 Q 65 70, 65 75 L 65 80 Q 65 85, 60 85 L 40 85 Q 35 85, 35 80 L 35 75 Q 35 70, 40 70 Z" fill="#FC6D6D;" />
+</svg>
+  <h3 class="icon-title">Bridging the Educational Gap</h3>
+</div>
+			<p>EduGeeks strives to ensure equal access to quality education, providing opportunities for learners from all backgrounds to thrive.</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+
+<div class="icon-container">
+  <!-- Building a community icon -->
+<svg id="empower-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="40" stroke="transparent" stroke-width="2" fill="transparent" />
+  <rect x="30" y="30" width="20" height="40" fill="black" />
+  <rect x="50" y="30" width="20" height="20" fill="black" />
+  <rect x="50" y="50" width="20" height="20" fill="black" />
+  <rect x="30" y="70" width="40" height="20" fill="black" />
+</svg>
+  <h3 class="icon-title">Fostering Lifelong Learning</h3>
+</div>
+			<p>EduGeeks fosters a culture of continuous learning, inspiring individuals to embrace learning as a lifelong journey of personal and professional growth.</p>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+<div class="icon-container">
+ <svg id="empower-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="40" stroke="transparent" stroke-width="2" fill="transparent" />
+  <path d="M 30 30 L 70 70 M 70 30 L 30 70" stroke="#ffb31a" stroke-width="4" stroke-linecap="round" />
+  <rect x="38" y="40" width="24" height="20" fill="black" />
+</svg>
+  <h3 class="icon-title">Empowering with Technology</h3>
+</div>
+			<p>EduGeeks empowers learners with digital literacy skills and prepares them for the future by integrating technology into educational experiences.</p>
+    </div>
+  </div>
+</div>
+  <!-------
+ ======================
+ /MISSION SECTION============
+ ======================
+ ------>
+
+
+
+
+
+
+
+
+
+
+
+<div class="header-large">
+  <h1 class="center-header">20+ Courses</h1>
+  <p class="center-paragraph"><span style="border-left: 2px solid #ffb31a; border-right: 2px solid #ffb31a; color: #fff; padding: 3px 10px;">EduGeeks</span>
+    courses are the gateway to unlocking your full potential. Explore more for
+    cutting-edge technologies to timeless disciplines, our courses empower
+    learners of all backgrounds to embark on a transformative journey of
+    knowledge, discovery, and personal achievement.</p>
+</div>
+
+
+
+
+
+
+<section class="designbtn">
+		<span id="spin"></span>
+	</section>
+
+
+
+
+
+
+
+<div id="attached">
+      <div class="card">
+        <h2 style="color: var(--goldenrodColor);">Token</h2>
+        <p>The native token of the DFT ecosystem.</p>
+        <button>Developers Hub</button>
+      </div>
+      <div class="card">
+        <h2>Governance</h2>
+        <p>A decentralized system for community governance and decision-making.</p>
+        <button style="background: #FC6D6D;">Designers Hub</button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+<!--
+===================
+Tokenomics Section
+===================
+-->
+<div class="header-large">
+  <h1 class="center-header">10+ Features</h1>
+  <p class="center-paragraph"><span style="border-left: 2px solid #ffb31a; border-right: 2px solid #ffb31a; color: #fff; padding: 3px 10px;">Experience</span>
+    the power of EduGeeks' features, where interactive learning meets
+    personalized paths, collaboration fuels growth, and innovation sparks endless
+    possibilities. Engage, progress, and achieve your goals with our gamified
+    platform, practical projects, and mobile accessibility. Let the cutting-edge
+    features of EduGeeks propel your educational journey to new heights.
+  </p>
+</div>
+
+
+<center>
+<div class="slideshow-container">
+  <div class="slide-card">
+    <h2>Interactive Learning Materials</h2>
+    <p>EduGeeks provides interactive learning materials such as videos, quizzes, interactive simulations, and hands-on exercises to enhance the learning experience and promote active engagement.</p>
+  </div>
+  <div class="slide-card">
+    <h2>Personalized Learning Paths</h2>
+    <p>EduGeeks offers personalized learning paths tailored to individual learners' needs and goals. Learners can receive customized course recommendations and progress tracking based on their interests, skills, and learning preferences.</p>
+  </div>
+  <div class="slide-card">
+    <h2>Gamified Learning</h2>
+    <p>EduGeeks incorporates gamification elements into the learning process, making it fun and engaging. Learners can earn badges, achievements, and rewards for completing courses, unlocking new levels, and participating in educational challenges.</p>
+  </div>
+  <div class="slide-card">
+    <h2>Live Virtual Classes</h2>
+    <p>EduGeeks offers live virtual classes conducted by experienced instructors. Learners can participate in real-time interactive sessions, ask questions, and engage in discussions with both instructors and fellow learners.</p>
+  </div>
+  <div class="slide-card">
+    <h2>Practical Projects and Case Studies</h2>
+    <p>EduGeeks integrates practical projects and real-world case studies into its courses to provide hands-on experience and help learners apply their knowledge to practical scenarios.</p>
+  </div>
+  <div class="slide-card">
+    <h2>Certification and Credentials</h2>
+    <p>EduGeeks provides certifications upon successful completion of courses. These certifications can validate learners' achievements and enhance their professional profiles and career prospects.</p>
+  </div>
+  <div class="slide-card">
+    <h2>Learning Analytics and Progress Tracking</h2>
+    <p>EduGeeks utilizes learning analytics to track learners' progress, identify areas for improvement, and provide personalized feedback. Learners can monitor their own progress and gain insights into their learning journey.</p>
+  </div>
+ <div class="slide-card">
+    <h2>Mobile Learning</h2>
+    <p>EduGeeks offers a mobile-friendly platform and mobile applications, allowing learners to access courses and learning materials anytime, anywhere using their smartphones or tablets.</p>
+  </div>
+   <div class="slide-card">
+    <h2>Alumni Network and Career Support</h2>
+    <p>EduGeeks establishes an alumni network and provides career support services to help learners connect with industry professionals, explore job opportunities, and receive career guidance and mentorship.</p>
+  </div>
+</div>
+  </center>
+<!--
+===================
+/Tokenomics Section
+===================
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-----
+==================
+Footer Section
+==================
+------->
+<footer>
+	<div class="content">
+		<div class="top">
+		</div>
+		<div class="link-boxes">
+			<ul class="box">
+				<li><a href="#">Github</a></li>
+				<li><a href="#">Reddit</a></li>
+			</ul>
+
+			<ul class="box">
+				<li><a href="#">Telegram</a></li>
+				<li><a href="#">Discord</a></li>
+			</ul>
+
+	<ul class="box">
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Tiktok</a></li>
+			</ul>
+
+			<ul class="box">
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">Instagram</a></li>
+			</ul>
+
+		</div>
+	</div>
+	    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2021 <a href="#">Sitesoch.</a></span>
+        <span class="policy_terms">
+          <a href="#">Powered by InkLab</a>
+
+        </span>
+      </div>
+    </div>
+</footer>
+<!-----
+==================
+/Footer Section
+==================
+------->
+
+<script>
+  let slideIndex = 0;
+const cards = document.getElementsByClassName('slide-card');
+
+function showNextCard() {
+  for (let i = 0; i < cards.length; i++) {
+    cards[i].style.display = 'none';
+  }
+  slideIndex++;
+  if (slideIndex > cards.length) {
+    slideIndex = 1;
+  }
+  cards[slideIndex - 1].style.display = 'block';
+  setTimeout(showNextCard, 3000); // Change slide every 3 seconds (adjust as desired)
+}
+
+showNextCard();
+</script>
 </body>
-
-
-
 </html>
